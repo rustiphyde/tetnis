@@ -1,7 +1,10 @@
 import React from "react";
+import { StyledCell } from './styles/StyledCell';
+import { RUSTOMINOS } from '../rustominos';
+
 
 const Cell = ({ type }) => (
-<div>cell</div>
+<StyledCell type={'L'} color={RUSTOMINOS['L'].color}>cell</StyledCell>
 );
 
 export default Cell;

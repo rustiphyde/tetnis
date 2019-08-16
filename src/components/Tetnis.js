@@ -2,13 +2,16 @@ import React from 'react';
 
 import { createStage } from '../gameHelpers';
 
+import { StyledTetnisWrapper, StyledTetnis } from './styles/StyledTetnis';
+
 import Stage from './Stage';
 import Display from './Display';
 import StartButton from './StartButton';
 
 const Tetnis = () => {
     return (
-        <div>
+        <StyledTetnisWrapper>
+            <StyledTetnis>
             <Stage stage={createStage()} />
             <aside>
                 <div>                    
@@ -18,7 +21,8 @@ const Tetnis = () => {
                 </div>
                 <StartButton /> 
             </aside>
-        </div>
+            </StyledTetnis>
+        </StyledTetnisWrapper>
     )
 }
 
