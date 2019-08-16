@@ -22,4 +22,5 @@ export const StyledTetnis = styled.div`
         max-width: 200px;
         display: block;
         padding: 0 20px;
+    }
 `

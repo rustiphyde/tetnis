@@ -4,7 +4,7 @@ import { RUSTOMINOS } from '../rustominos';
 
 
 const Cell = ({ type }) => (
-<StyledCell type={'L'} color={RUSTOMINOS['L'].color}>cell</StyledCell>
+<StyledCell type={type} color={RUSTOMINOS[type].color}></StyledCell>
 );
 
 export default Cell;

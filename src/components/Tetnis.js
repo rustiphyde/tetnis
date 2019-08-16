@@ -14,7 +14,7 @@ const Tetnis = () => {
             <StyledTetnis>
             <Stage stage={createStage()} />
             <aside>
-                <div>                    
+                <div  color="#ff9800">                    
                 <Display text="Score" />
                 <Display text="Rows" />
                 <Display text="Level" />
