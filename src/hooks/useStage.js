@@ -1,9 +1,33 @@
-import { useState } from 'react';
+import { useState, useEffect } from "react";
 
-import { createStage } from '../gameHelpers';
+import { createStage } from "../gameHelpers";
 
-export const useStage = () => {
-    const [stage, setStage] = useState(createStage());
+export const useStage = (player, resetPlayer) => {
+  const [stage, setStage] = useState(createStage());
 
-    return [stage, setStage];
-}
+  useEffect(() => {
+    const updateStage = prevStage => {
+      // First flush the stage
+      const newStage = prevStage.map(row =>
+        row.map(cell => (cell[1] === "clear" ? [0, "clear"] : cell))
+      );
+        //Then draw the rustomino
+        player.rustomino.forEach((row, y) => {
+            row.forEach((value, x) => {
+                if (value !== 0){
+                    newStage[y + player.pos.y][x + player.pos.x] = [
+                        value,
+                        `${player.collided ? 'merged' : 'clear'}`,
+                    ];
+                }
+            });
+        });
+        return newStage;
+    };
+  
+
+    setStage(prev => updateStage(prev));
+  }, [player]);
+
+  return [stage, setStage];
+};
