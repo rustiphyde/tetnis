@@ -27,12 +27,20 @@ export const RUSTOMINOS = {
   Z: {
     shape: [["Z", "Z", 0], [0, "Z", "Z"], [0, 0, 0]],
     color: "251, 171, 105"
+  },
+  H: {
+    shape: [["H", 0, "H"], ["H", "H", "H"], ["H", 0, "H"]],
+    color: "222, 173, 120"
+  },
+  K: {
+    shape: [["K", 0, "K"], ["K", "K", 0], ["K", 0, "K"]],
+  color: "139, 148, 124"
   }
-}
+};
 
 export const randomRustomino = () => {
-    const rustominos = 'IJLOSTZ';
-    const randRustomino = 
-        rustominos[Math.floor(Math.random() * rustominos.length)];
-        return RUSTOMINOS[randRustomino];
-}
+  const rustominos = "IJLOSTZHK";
+  const randRustomino =
+    rustominos[Math.floor(Math.random() * rustominos.length)];
+  return RUSTOMINOS[randRustomino];
+};

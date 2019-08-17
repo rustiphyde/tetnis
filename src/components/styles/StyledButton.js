@@ -16,6 +16,7 @@ outline: none;
 cursor: pointer;
 &:hover {
     background: #B7410E;
+    color: #000;
 }
 
 `
