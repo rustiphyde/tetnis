@@ -29,7 +29,8 @@ export const StyledTetris = styled.div`
 		padding: 0 20px;
 	}
 	@media (min-width: 767px) {
-		display: flex;
+    display: flex;
+    flex-direction: row;
 		align-items: flex-start;
 		padding: 40px;
 		margin: 0 auto;
