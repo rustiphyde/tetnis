@@ -5,7 +5,7 @@ box-sizing: border-box;
 margin: 0 0 20px 0;
 padding: 20px;
 min-height: 30px;
-width: 100%;
+width: 8rem;
 border-radius: 20px;
 border: none;
 color: #ff9800;
