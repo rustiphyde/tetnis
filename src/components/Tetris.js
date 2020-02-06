@@ -98,9 +98,6 @@ const Tetris = () => {
     }
   };
 
-  //  TODO design mobile buttons and add functionality to make 
-  // them play the game same as keyCode events
-
   return (
     <StyledTetrisWrapper
       role="button"
