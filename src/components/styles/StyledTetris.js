@@ -15,11 +15,13 @@ export const StyledTetris = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  // position: absolute;
   aside {
     width: 50%;
     max-width: auto;
     display: block;
     padding: 0 20px;
+  }
+  @media (min-width: 767px){
+    flex-direction: row;
   }
 `;
